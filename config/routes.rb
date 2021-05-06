@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-roots "movies#index"
+    root "movies#index"
 
-resources :movies
+    resources :movies do
+        resources :reviews
+    end
 end
